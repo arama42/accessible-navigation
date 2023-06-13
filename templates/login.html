@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #2C3E50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: #444;
+    }
+    form {
+        background-color: #ECF0F1;
+        max-width: 500px;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #2C3E50;
+    }
+    label {
+        display: block;
+        margin: 25px 0 10px;
+        font-weight: bold;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #BDC3C7;
+        border-radius: 50px;
+        box-sizing: border-box;
+    }
+    button[type="submit"], #face-login {
+        margin-top: 30px;
+        padding: 15px 20px;
+        border: none;
+        color: white;
+        background-color: #3498DB;
+        cursor: pointer;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        width: 100%;
+    }
+    button[type="submit"]:hover, #face-login:hover {
+        background-color: #2980B9;
+    }
+    .register-btn {
+        margin-top: 15px;
+        text-align: center;
+    }
+    .register-btn a {
+        color: #3498DB;
+        text-decoration: none;
+        font-size: 22px;
+        padding: 10px;
+        background-color: #ECF0F1;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-block;
+    }
+    .register-btn a:hover {
+        color: #2980B9;
+        background-color: #BDC3C7;
+    }
+    </style>
+</head>
+<body>
+    <form method="POST" action="/face_login">
+        <h2>Login to Accessible Reservation</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required placeholder="Enter your username">
+        <button type="submit" class="btn btn-primary">Face Login</button>
+        <div class="register-btn">
+            <small>Don't have an account?</small>
+            <a href="/register" class="btn btn-link">Register</a>
+        </div>
+    </form>
+</body>
+</html>
